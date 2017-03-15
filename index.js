@@ -97,7 +97,7 @@ function arrayGetNative() {
     var value;
     var maxIndex = arr.length - 1;
     for (var i = 0; i < REPEATS; i++) {
-        value = arr[~~(Math.random() * maxIndex)];
+        value = arr[Math.floor(Math.random() * maxIndex)];
     }
 }
 
@@ -108,7 +108,7 @@ function arrayGetSeamlessImmutableJs() {
     var value;
     var maxIndex = arr.length - 1;
     for (var i = 0; i < REPEATS; i++) {
-        value = arr[~~(Math.random() * maxIndex)];
+        value = arr[Math.floor(Math.random() * maxIndex)];
     }
 }
 
@@ -119,7 +119,7 @@ function arrayGetImmutablejs() {
     var value;
     var maxIndex = arr.size - 1;
     for (var i = 0; i < REPEATS; i++) {
-        value = arr.get(~~(Math.random() * maxIndex));
+        value = arr.get(Math.floor(Math.random() * maxIndex));
     }
 }
 
@@ -128,7 +128,7 @@ function arrayGetMoriJs() {
     var value;
     var maxIndex = moriJs.count(arr) - 1;
     for (var i = 0; i < REPEATS; i++) {
-        value = moriJs.get(arr, ~~(Math.random() * maxIndex));
+        value = moriJs.get(arr, Math.floor(Math.random() * maxIndex));
     }
 }
 
@@ -139,7 +139,7 @@ function arrayGetReactAddonsUpdateJs() {
     var value;
     var maxIndex = arr.length - 1;
     for (var i = 0; i < REPEATS; i++) {
-        value = arr[~~(Math.random() * maxIndex)];
+        value = arr[Math.floor(Math.random() * maxIndex)];
     }
 }
 
@@ -150,7 +150,7 @@ function arrayGetImmutabilityHelperJs() {
     var value;
     var maxIndex = arr.length - 1;
     for (var i = 0; i < REPEATS; i++) {
-        value = arr[~~(Math.random() * maxIndex)];
+        value = arr[Math.floor(Math.random() * maxIndex)];
     }
 }
 
@@ -233,7 +233,7 @@ function arrayGetInNative() {
     var value;
     var maxIndex = arr[0].length - 1;
     for (var i = 0; i < REPEATS; i++) {
-        value = arr[0][~~(Math.random() * maxIndex)];
+        value = arr[0][Math.floor(Math.random() * maxIndex)];
     }
 }
 
@@ -244,7 +244,7 @@ function arrayGetInSeamlessImmutableJs() {
     var value;
     var maxIndex = arr[0].length - 1;
     for (var i = 0; i < REPEATS; i++) {
-        value = arr[0][~~(Math.random() * maxIndex)];
+        value = arr[0][Math.floor(Math.random() * maxIndex)];
     }
 }
 
@@ -255,7 +255,7 @@ function arrayGetInImmutableJs() {
     var value;
     var maxIndex = arr.get(0).size - 1;
     for (var i = 0; i < REPEATS; i++) {
-        value = arr.getIn([0, ~~(Math.random() * maxIndex)]);
+        value = arr.getIn([0, Math.floor(Math.random() * maxIndex)]);
     }
 }
 
@@ -264,7 +264,7 @@ function arrayGetInMoriJs() {
     var value;
     var maxIndex = moriJs.count(moriJs.get(arr, 0)) - 1;
     for (var i = 0; i < REPEATS; i++) {
-        value = moriJs.getIn(arr, [0, ~~(Math.random() * maxIndex)]);
+        value = moriJs.getIn(arr, [0, Math.floor(Math.random() * maxIndex)]);
     }
 }
 
@@ -275,7 +275,7 @@ function arrayGetInReactAddonsUpdateJs() {
     var value;
     var maxIndex = arr[0].length - 1;
     for (var i = 0; i < REPEATS; i++) {
-        value = arr[0][~~(Math.random() * maxIndex)];
+        value = arr[0][Math.floor(Math.random() * maxIndex)];
     }
 }
 
@@ -286,7 +286,7 @@ function arrayGetInImmutabilityHelperJs() {
     var value;
     var maxIndex = arr[0].length - 1;
     for (var i = 0; i < REPEATS; i++) {
-        value = arr[0][~~(Math.random() * maxIndex)];
+        value = arr[0][Math.floor(Math.random() * maxIndex)];
     }
 }
 
@@ -357,7 +357,7 @@ function arraySetNative() {
     var maxIndex = arr.length - 1;
     for (var i = 0; i < REPEATS; i++) {
         arr = [].concat(arr);
-        arr[~~(Math.random() * maxIndex)] = Math.random();
+        arr[Math.floor(Math.random() * maxIndex)] = Math.random();
     }
 }
 
@@ -367,7 +367,7 @@ function arraySetSeamlessImmutableJs() {
     ]);
     var maxIndex = arr.length - 1;
     for (var i = 0; i < REPEATS; i++) {
-        arr.set(~~(Math.random() * maxIndex), Math.random());
+        arr.set(Math.floor(Math.random() * maxIndex), Math.random());
     }
 }
 
@@ -377,7 +377,7 @@ function arraySetImmutableJs() {
     ]);
     var maxIndex = arr.size - 1;
     for (var i = 0; i < REPEATS; i++) {
-        arr = arr.set(~~(Math.random() * maxIndex), Math.random());
+        arr = arr.set(Math.floor(Math.random() * maxIndex), Math.random());
     }
 }
 
@@ -386,7 +386,7 @@ function arraySetMoriJs() {
     var value;
     var maxIndex = moriJs.count(arr) - 1;
     for (var i = 0; i < REPEATS; i++) {
-        value = moriJs.assoc(arr, ~~(Math.random() * maxIndex), Math.random());
+        value = moriJs.assoc(arr, Math.floor(Math.random() * maxIndex), Math.random());
     }
 }
 
@@ -396,7 +396,7 @@ function arraySetReactAddonsUpdateJs() {
     ];
     var maxIndex = arr.length - 1;
     for (var i = 0; i < REPEATS; i++) {
-        arr = update(arr, { [~~(Math.random() * maxIndex)]: { $set: Math.random() } })
+        arr = update(arr, { [Math.floor(Math.random() * maxIndex)]: { $set: Math.random() } })
     }
 }
 
@@ -406,7 +406,7 @@ function arraySetImmutabilityHelperJs() {
     ];
     var maxIndex = arr.length - 1;
     for (var i = 0; i < REPEATS; i++) {
-        arr = updateih(arr, { [~~(Math.random() * maxIndex)]: { $set: Math.random() } })
+        arr = updateih(arr, { [Math.floor(Math.random() * maxIndex)]: { $set: Math.random() } })
     }
 }
 
@@ -489,7 +489,7 @@ function arraySetInNative() {
     for (var i = 0; i < REPEATS; i++) {
         arr = [].concat(arr);
         arr[0] = [].concat(arr[0]);
-        arr[0][~~(Math.random() * maxIndex)] = Math.random();
+        arr[0][Math.floor(Math.random() * maxIndex)] = Math.random();
     }
 }
 
@@ -499,7 +499,7 @@ function arraySetInSeamlessImmutableJs() {
     ]]);
     var maxIndex = arr[0].length - 1;
     for (var i = 0; i < REPEATS; i++) {
-        arr = arr.setIn([0, ~~(Math.random() * maxIndex)], Math.random());
+        arr = arr.setIn([0, Math.floor(Math.random() * maxIndex)], Math.random());
     }
 }
 
@@ -509,7 +509,7 @@ function arraySetInImmutableJs() {
     ]]);
     var maxIndex = arr.get(0).size - 1;
     for (var i = 0; i < REPEATS; i++) {
-        arr = arr.setIn([0, ~~(Math.random() * maxIndex)], Math.random());
+        arr = arr.setIn([0, Math.floor(Math.random() * maxIndex)], Math.random());
     }
 }
 
@@ -517,7 +517,7 @@ function arraySetInMoriJs() {
     var arr = moriJs.vector(moriJs.vector(Math.random(), Math.random(), Math.random(), Math.random(), Math.random()));
     var maxIndex = moriJs.count(moriJs.get(arr, 0)) - 1;
     for (var i = 0; i < REPEATS; i++) {
-        arr = moriJs.assocIn(arr, [0, ~~(Math.random() * maxIndex)], Math.random());
+        arr = moriJs.assocIn(arr, [0, Math.floor(Math.random() * maxIndex)], Math.random());
     }
 }
 
@@ -527,7 +527,7 @@ function arraySetInReactAddonsUpdateJs() {
     ]];
     var maxIndex = arr[0].length - 1;
     for (var i = 0; i < REPEATS; i++) {
-        update(arr, { [0]: { [~~(Math.random() * maxIndex)]: { $set: Math.random() } } });
+        update(arr, { [0]: { [Math.floor(Math.random() * maxIndex)]: { $set: Math.random() } } });
     }
 }
 
@@ -537,7 +537,7 @@ function arraySetInImmutabilityHelperJs() {
     ]];
     var maxIndex = arr[0].length - 1;
     for (var i = 0; i < REPEATS; i++) {
-        updateih(arr, { [0]: { [~~(Math.random() * maxIndex)]: { $set: Math.random() } } });
+        updateih(arr, { [0]: { [Math.floor(Math.random() * maxIndex)]: { $set: Math.random() } } });
     }
 }
 
