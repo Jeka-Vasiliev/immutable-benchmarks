@@ -4,11 +4,15 @@
   "description": "Seamless-immutable vs Immutable.js vs Mori",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production&& node --expose-gc ./index.js"
+    "start": "cross-env NODE_ENV=production&&webpack -p&&node --expose-gc ./build/bundle.js"
   },
   "author": "MrCheater",
   "license": "MIT",
   "dependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.0",
+    "babel-plugin-transform-es2015-computed-properties": "^6.22.0",
+    "babel-preset-env": "^1.2.1",
     "cross-env": "^3.2.4",
     "immutability-helper": "^2.1.2",
     "immutable": "^3.8.1",
